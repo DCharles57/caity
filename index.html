@@ -2,205 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Caity ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caity ✨</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <canvas id="fx" aria-hidden="true"></canvas>
-
   <header class="topbar">
-    <div>
-      <h1 class="brand">Caity</h1>
-      <p class="subtitle">A little website for a big soul. 🎄</p>
-    </div>
+    <h1 class="brand">Caity</h1>
+    <p class="subtitle">A little website for a big soul ✨</p>
 
-    <div class="pill" id="pill" title="There’s a secret…">
-      <span class="dot"></span>
-      <span class="pillText">Type something…</span>
+    <div class="pill">
+      <span class="pillLabel">psst…</span>
+      <span class="pillText">there’s a secret 👀</span>
+      <span class="pillHint">type something…</span>
     </div>
   </header>
 
   <main class="wrap">
+
     <!-- HERO -->
     <section class="hero">
       <div class="heroGrid">
-        <div class="heroCard">
-          <div class="heroImgWrap">
-            <img class="heroImg" src="assets/caitlin-hero.jpg" alt="Caitlin smiling" />
-            <div class="heroTag">
-              <div class="heroTagTitle">Masters Energy</div>
-              <div class="heroTagSub">Mental Health • Heart • Genius Brain</div>
-            </div>
+
+        <div class="heroCard heroPhoto">
+          <img src="./assets/caitlin-hero.jpg" alt="Caitlin smiling" />
+          <div class="heroTags">
+            <span>Masters Energy 🎓</span>
+            <span>Mental Health + Heart 🧠❤️</span>
+            <span>Red Hair Era 🔥</span>
+            <span>Math Wizard ➗</span>
           </div>
         </div>
 
         <div class="heroCard heroCopy">
-          <h2>To the woman who keeps leveling up.</h2>
+          <h2>To the woman who keeps leveling up</h2>
           <p>
-            Caity, you’re the kind of person that makes “constantly trying to be better” look effortless.
-            You’re conquering the mental health field, you’re built different in math, and somehow you’re
-            still the funniest person in the room (even when the jokes are so you).
+            Caity — you’re the kind of person that makes “constantly trying to be better”
+            look effortless. You’re conquering the mental health field, built different,
+            and somehow still the funniest person in the room (even when the jokes are questionable).
           </p>
 
-          <div class="chips">
-            <span class="chip">🇮🇹 Italian vibes</span>
-            <span class="chip">🏎️ Drives like NASCAR</span>
-            <span class="chip">❤️ Red hair forever</span>
-            <span class="chip">✨ Freckles + glow</span>
-            <span class="chip">🍳 Bomb cook</span>
-            <span class="chip">🧠 Math monster</span>
-            <span class="chip">😈 Ghostface fan</span>
-            <span class="chip">🩸 Terrifier energy</span>
-            <span class="chip">🥤 XXL Strawberry only</span>
-            <span class="chip">💪 Confidence certified</span>
-          </div>
-
-          <div class="heroBtns">
-            <a class="btn primary" href="#reasons">Reasons I Love You</a>
-            <a class="btn" href="#memories">Memory Map</a>
-          </div>
-
-          <p class="tinyHint">Tip: type <b>XXL</b> anywhere… 🍓</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- REASONS -->
-    <section class="section" id="reasons">
-      <div class="card">
-        <div class="cardTop">
-          <h3>Reasons I Love You</h3>
-          <p class="muted">Hit the button — it’ll cycle through the reasons.</p>
+          <button id="loveBtn">Reasons I love you 💕</button>
+          <p id="loveLine"></p>
         </div>
 
-        <div class="reasonBox">
-          <div class="reasonLine" id="reasonLine">Because you make growth feel like a lifestyle, not a mood.</div>
-          <button class="btn primary" id="nextReasonBtn">Next Reason ✨</button>
-        </div>
       </div>
     </section>
 
     <!-- MEMORY MAP -->
-    <section class="section" id="memories">
-      <div class="card">
-        <div class="cardTop">
-          <h3>Memory Map</h3>
-          <p class="muted">Tap a card — it flips. Tap the photo — it opens big.</p>
+    <section class="memories">
+      <h2>Our Memory Map 🌍</h2>
+
+      <div class="memoryGrid">
+        <div class="memoryCard">
+          <div class="cardInner">
+            <div class="cardFront">
+              <img src="./assets/travel-1.jpg" />
+            </div>
+            <div class="cardBack">Laughing until we cried</div>
+          </div>
         </div>
 
-        <div class="grid">
-          <!-- Card 1 -->
-          <article class="flip" data-caption="One of those days where everything felt easy with you.">
-            <div class="flipInner">
-              <div class="flipFront">
-                <img src="assets/travel-1.jpg" alt="Travel memory 1" />
-                <div class="flipLabel">Travel 1</div>
-              </div>
-              <div class="flipBack">
-                <h4>Memory #1</h4>
-                <p>“Us + a new place + your laugh = perfect.”</p>
-                <button class="btn mini openImg">Open photo</button>
-              </div>
+        <div class="memoryCard">
+          <div class="cardInner">
+            <div class="cardFront">
+              <img src="./assets/travel-2.jpg" />
             </div>
-          </article>
+            <div class="cardBack">You driving like NASCAR 🏁</div>
+          </div>
+        </div>
 
-          <!-- Card 2 -->
-          <article class="flip" data-caption="You being you… confident, hilarious, unstoppable.">
-            <div class="flipInner">
-              <div class="flipFront">
-                <img src="assets/travel-2.jpeg" alt="Travel memory 2" />
-                <div class="flipLabel">Travel 2</div>
-              </div>
-              <div class="flipBack">
-                <h4>Memory #2</h4>
-                <p>“Even the scenery couldn’t compete.”</p>
-                <button class="btn mini openImg">Open photo</button>
-              </div>
+        <div class="memoryCard">
+          <div class="cardInner">
+            <div class="cardFront">
+              <img src="./assets/travel-3.jpg" />
             </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="flip" data-caption="Another chapter of us — more life, more love.">
-            <div class="flipInner">
-              <div class="flipFront">
-                <img src="assets/travel-3.jpg" alt="Travel memory 3" />
-                <div class="flipLabel">Travel 3</div>
-              </div>
-              <div class="flipBack">
-                <h4>Memory #3</h4>
-                <p>“Wherever we went, it felt like home.”</p>
-                <button class="btn mini openImg">Open photo</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Extra vibe cards -->
-          <article class="flip" data-caption="Red hair is not a phase. It’s a brand.">
-            <div class="flipInner">
-              <div class="flipFront">
-                <img src="assets/caitlin-redhair.jpg" alt="Caitlin red hair" />
-                <div class="flipLabel">Red Hair Era</div>
-              </div>
-              <div class="flipBack">
-                <h4>Signature</h4>
-                <p>“The red hair? That’s the main character cue.”</p>
-                <button class="btn mini openImg">Open photo</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="flip" data-caption="Ghostface stays invited. Always.">
-            <div class="flipInner">
-              <div class="flipFront">
-                <img src="assets/ghostface.jpg" alt="Ghostface" />
-                <div class="flipLabel">Ghostface</div>
-              </div>
-              <div class="flipBack">
-                <h4>Horror Love</h4>
-                <p>“Your taste is terrifying… in the best way.”</p>
-                <button class="btn mini openImg">Open photo</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="flip" data-caption="Your cooking is dangerous. I’m not mad though.">
-            <div class="flipInner">
-              <div class="flipFront">
-                <img src="assets/food-1.jpg" alt="Food memory" />
-                <div class="flipLabel">Chef Mode</div>
-              </div>
-              <div class="flipBack">
-                <h4>Bomb Cook</h4>
-                <p>“If love had a flavor, you seasoned it.”</p>
-                <button class="btn mini openImg">Open photo</button>
-              </div>
-            </div>
-          </article>
-
+            <div class="cardBack">Best trips, best energy</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <p class="muted">
-        Built with love • <span id="year"></span>
-        <span class="tiny">Tip: type XXL for 🍓 mode.</span>
-      </p>
-    </footer>
   </main>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lbClose" id="lbClose" aria-label="Close">✕</button>
-    <img id="lbImg" alt="Expanded photo" />
-    <p class="lbCap" id="lbCap"></p>
-  </div>
+  <footer class="footer">
+    Built with love 💖
+  </footer>
 
-  <!-- TOAST -->
-  <div class="toast" id="toast" aria-live="polite"></div>
-
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
