@@ -1,28 +1,70 @@
-// Reasons I love you
-const loveLines = [
-  "You care deeply and love loudly 💕",
-  "You make people feel safe being themselves",
-  "You’re brilliant and humble",
-  "Your laugh is contagious",
-  "You never stop growing"
+const reasons = [
+  "Because you make growth look like art — calm, intentional, and real 🪿",
+  "Because your laugh is a reset button for the whole room.",
+  "Because you care deeply, but you still protect your peace.",
+  "Because your energy says: ‘I’m leveling up’ without needing to announce it.",
+  "Because you’re brilliant AND funny… unfair combo 😤🪿",
 ];
 
-let loveIndex = 0;
-const loveBtn = document.getElementById("loveBtn");
-const loveLine = document.getElementById("loveLine");
+let reasonIndex = 0;
 
-loveBtn.addEventListener("click", () => {
-  loveLine.textContent = loveLines[loveIndex];
-  loveIndex = (loveIndex + 1) % loveLines.length;
+const nextReasonBtn = document.getElementById("nextReasonBtn");
+const reasonText = document.getElementById("reasonText");
+
+nextReasonBtn.addEventListener("click", () => {
+  reasonText.textContent = reasons[reasonIndex % reasons.length];
+  reasonIndex++;
 });
 
-// Easter Egg: XXL → strawberry glow
-let typed = "";
+// IMPORTANT: assets/ paths
+const memories = [
+  {
+    title: "Memory 1 🪿",
+    desc: "That trip where everything felt easy 🪿",
+    img: "assets/travel-1.jpg",
+  },
+  {
+    title: "Memory 2 💗",
+    desc: "Laughing until it hurt 💗",
+    img: "assets/travel-2.jpeg",
+  },
+  {
+    title: "Memory 3 ✨",
+    desc: "Red hair era vibes ✨",
+    img: "assets/caitlin-redhair.jpg",
+  },
+  {
+    title: "Memory 4 🫶",
+    desc: "A simple moment that meant a lot 🫶",
+    img: "assets/travel-3.jpg",
+  },
+];
 
-document.addEventListener("keydown", (e) => {
-  typed += e.key.toUpperCase();
-  if (typed.includes("XXL")) {
-    document.body.classList.add("strawberry");
-    typed = "";
+const memoryGrid = document.getElementById("memoryGrid");
+
+memories.forEach((m) => {
+  const card = document.createElement("div");
+  card.className = "memoryCard";
+
+  card.innerHTML = `
+    <img class="memoryImg" src="${m.img}" alt="${m.title}">
+    <div class="memoryBody">
+      <p class="memoryTitle">${m.title}</p>
+      <p class="memoryDesc">${m.desc}</p>
+    </div>
+  `;
+
+  memoryGrid.appendChild(card);
+});
+
+// Secret “goose” type thing
+let buffer = "";
+window.addEventListener("keydown", (e) => {
+  if (e.key.length === 1) buffer += e.key.toLowerCase();
+  if (buffer.length > 20) buffer = buffer.slice(-20);
+
+  if (buffer.includes("goose")) {
+    buffer = "";
+    alert("🪿 HONK! Goose mode activated 🪿");
   }
 });
