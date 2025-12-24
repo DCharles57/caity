@@ -1,28 +1,37 @@
-// Reasons I love you
-const loveLines = [
-  "You care deeply and love loudly 💕",
-  "You make people feel safe being themselves",
-  "You’re brilliant and humble",
-  "Your laugh is contagious",
-  "You never stop growing"
+// Reasons button
+const reasons = [
+  "You genuinely care about people 💗",
+  "You’re smart as hell and humble about it",
+  "Your laugh fixes bad days instantly",
+  "You love geese and that says everything 🪿",
+  "You’re always growing, never stagnant",
+  "You feel safe to be around"
 ];
 
-let loveIndex = 0;
-const loveBtn = document.getElementById("loveBtn");
-const loveLine = document.getElementById("loveLine");
+let reasonIndex = 0;
+const reasonText = document.getElementById("reasonText");
+const reasonBtn = document.getElementById("reasonBtn");
 
-loveBtn.addEventListener("click", () => {
-  loveLine.textContent = loveLines[loveIndex];
-  loveIndex = (loveIndex + 1) % loveLines.length;
-});
+if (reasonBtn) {
+  reasonBtn.addEventListener("click", () => {
+    reasonText.textContent = reasons[reasonIndex];
+    reasonIndex = (reasonIndex + 1) % reasons.length;
+  });
+}
 
-// Easter Egg: XXL → strawberry glow
-let typed = "";
+// Easter egg: XXL → strawberry glow 🍓
+let buffer = "";
 
 document.addEventListener("keydown", (e) => {
-  typed += e.key.toUpperCase();
-  if (typed.includes("XXL")) {
+  buffer += e.key.toUpperCase();
+  buffer = buffer.slice(-3);
+
+  if (buffer === "XXL") {
     document.body.classList.add("strawberry");
-    typed = "";
+
+    setTimeout(() => {
+      document.body.classList.remove("strawberry");
+    }, 2500);
   }
 });
+
