@@ -2,94 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Caity ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles.css" />
+  <title>Caity 🪿</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="topbar">
-    <h1 class="brand">Caity</h1>
-    <p class="subtitle">A little website for a big soul ✨</p>
-
-    <div class="pill">
-      <span class="pillLabel">psst…</span>
-      <span class="pillText">there’s a secret 👀</span>
-      <span class="pillHint">type something…</span>
-    </div>
-  </header>
+  <!-- Cute geese floating around -->
+  <div class="goose goose1" aria-hidden="true">🪿</div>
+  <div class="goose goose2" aria-hidden="true">🪿</div>
+  <div class="goose goose3" aria-hidden="true">🪿</div>
 
   <main class="wrap">
+    <header class="hero">
+      <div class="heroText">
+        <h1>Caity <span class="emoji">🪿</span></h1>
+        <p class="subtitle">psst… there’s a secret—type something…</p>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="heroGrid">
+        <ul class="tagList">
+          <li>Caity smiling ✨</li>
+          <li>Master’s Energy 💫</li>
+          <li>Mental Health + Heart 💗</li>
+          <li>Red Hair Era 🔥</li>
+          <li>Goose Approved 🪿</li>
+        </ul>
+      </div>
 
-        <div class="heroCard heroPhoto">
-          <img src="./assets/caitlin-hero.jpg" alt="Caitlin smiling" />
-          <div class="heroTags">
-            <span>Masters Energy 🎓</span>
-            <span>Mental Health + Heart 🧠❤️</span>
-            <span>Red Hair Era 🔥</span>
-            <span>Math Wizard ➗</span>
-          </div>
-        </div>
+      <div class="heroImg">
+        <!-- IMPORTANT: assets/ -->
+        <img src="assets/caitlin-hero.jpg" alt="Caity hero" />
+      </div>
+    </header>
 
-        <div class="heroCard heroCopy">
-          <h2>To the woman who keeps leveling up</h2>
-          <p>
-            Caity — you’re the kind of person that makes “constantly trying to be better”
-            look effortless. You’re conquering the mental health field, built different,
-            and somehow still the funniest person in the room (even when the jokes are questionable).
-          </p>
+    <section class="card">
+      <h2>To the woman who keeps leveling up</h2>
+      <p>
+        Caity — you’re the kind of person that makes “constantly trying to be better” look effortless.
+        You’re conquering the mental health field, you’re brilliant, and somehow you’re still the
+        funniest person in the room (even when the jokes are questionable 🪿).
+      </p>
+    </section>
 
-          <button id="loveBtn">Reasons I love you 💕</button>
-          <p id="loveLine"></p>
-        </div>
+    <section class="card">
+      <h2>Reasons I Love You 🪿</h2>
+      <p class="muted">Click the button</p>
+      <button id="nextReasonBtn" class="btn">Next reason</button>
+      <p id="reasonText" class="reason"></p>
+    </section>
 
+    <section class="card">
+      <h2>Memory Map ✈️</h2>
+
+      <div class="memoryGrid" id="memoryGrid">
+        <!-- JS will inject cards -->
       </div>
     </section>
 
-    <!-- MEMORY MAP -->
-    <section class="memories">
-      <h2>Our Memory Map 🌍</h2>
-
-      <div class="memoryGrid">
-        <div class="memoryCard">
-          <div class="cardInner">
-            <div class="cardFront">
-              <img src="./assets/travel-1.jpg" />
-            </div>
-            <div class="cardBack">Laughing until we cried</div>
-          </div>
-        </div>
-
-        <div class="memoryCard">
-          <div class="cardInner">
-            <div class="cardFront">
-              <img src="./assets/travel-2.jpg" />
-            </div>
-            <div class="cardBack">You driving like NASCAR 🏁</div>
-          </div>
-        </div>
-
-        <div class="memoryCard">
-          <div class="cardInner">
-            <div class="cardFront">
-              <img src="./assets/travel-3.jpg" />
-            </div>
-            <div class="cardBack">Best trips, best energy</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <footer class="footer">
+      <p>Built with love 🖤🪿</p>
+      <p class="tiny">Secret: type “goose” 😉</p>
+    </footer>
   </main>
 
-  <footer class="footer">
-    Built with love 💖
-  </footer>
-
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
