@@ -3,115 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caity 💖</title>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="./styles.css" />
+  <title>Caity 🪿</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
-  <!-- HEADER -->
-  <header class="topbar">
-    <h1 class="brand">Caity 🪿</h1>
-
-    <div class="pill">
-      <span class="pillLabel">psst…</span>
-      <span class="pillText">there’s a secret</span>
-      <span class="pillHint">type something…</span>
-    </div>
-  </header>
+  <!-- Cute geese floating around -->
+  <div class="goose goose1" aria-hidden="true">🪿</div>
+  <div class="goose goose2" aria-hidden="true">🪿</div>
+  <div class="goose goose3" aria-hidden="true">🪿</div>
 
   <main class="wrap">
+    <header class="hero">
+      <div class="heroText">
+        <h1>Caity <span class="emoji">🪿</span></h1>
+        <p class="subtitle">psst… there’s a secret—type something…</p>
 
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="heroGrid">
+        <ul class="tagList">
+          <li>Caity smiling ✨</li>
+          <li>Master’s Energy 💫</li>
+          <li>Mental Health + Heart 💗</li>
+          <li>Red Hair Era 🔥</li>
+          <li>Goose Approved 🪿</li>
+        </ul>
+      </div>
 
-        <div class="heroCard heroPhoto">
-          <img
-            class="heroImg"
-            src="./assets/caitlin-hero.jpg"
-            alt="Caity smiling"
-          />
+      <div class="heroImg">
+        <!-- IMPORTANT: assets/ -->
+        <img src="assets/caitlin-hero.jpg" alt="Caity hero" />
+      </div>
+    </header>
 
-          <div class="heroTags">
-            <div class="tag">Masters Energy ✨</div>
-            <div class="tag">Mental Health + Heart 💗</div>
-            <div class="tag">Red Hair Era 🔥</div>
-            <div class="tag">Goose Approved 🪿</div>
-          </div>
-        </div>
+    <section class="card">
+      <h2>To the woman who keeps leveling up</h2>
+      <p>
+        Caity — you’re the kind of person that makes “constantly trying to be better” look effortless.
+        You’re conquering the mental health field, you’re brilliant, and somehow you’re still the
+        funniest person in the room (even when the jokes are questionable 🪿).
+      </p>
+    </section>
 
-        <div class="heroCard heroCopy">
-          <h2>To the woman who keeps leveling up</h2>
-          <p>
-            Caity — you’re the kind of person that makes “constantly trying to be
-            better” look effortless. You’re conquering the mental health field,
-            you’re brilliant, and somehow you’re still the funniest person in the
-            room (even when the jokes are questionable 🪿).
-          </p>
-        </div>
+    <section class="card">
+      <h2>Reasons I Love You 🪿</h2>
+      <p class="muted">Click the button</p>
+      <button id="nextReasonBtn" class="btn">Next reason</button>
+      <p id="reasonText" class="reason"></p>
+    </section>
 
+    <section class="card">
+      <h2>Memory Map ✈️</h2>
+
+      <div class="memoryGrid" id="memoryGrid">
+        <!-- JS will inject cards -->
       </div>
     </section>
 
-    <!-- REASONS -->
-    <section class="section">
-      <article class="card">
-        <h3>Reasons I Love You 🪿</h3>
-        <p id="reasonText">Click the button</p>
-        <button id="reasonBtn" class="btn primary">Next reason</button>
-      </article>
-    </section>
-
-    <!-- MEMORY MAP -->
-    <section class="section">
-      <h3 class="center">Memory Map ✈️</h3>
-
-      <div class="memoryGrid">
-        <div class="memoryCard">
-          <div class="memoryInner">
-            <div class="memoryFront">
-              <img src="./assets/travel-1.jpg" alt="Memory 1" />
-            </div>
-            <div class="memoryBack">
-              <p>That trip where everything felt easy 🪿</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="memoryCard">
-          <div class="memoryInner">
-            <div class="memoryFront">
-              <img src="./assets/travel-2.jpeg" alt="Memory 2" />
-            </div>
-            <div class="memoryBack">
-              <p>Laughing until it hurt 💗</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="memoryCard">
-          <div class="memoryInner">
-            <div class="memoryFront">
-              <img src="./assets/travel-3.jpg" alt="Memory 3" />
-            </div>
-            <div class="memoryBack">
-              <p>Somehow a goose was involved 🪿</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <footer class="footer">
+      <p>Built with love 🖤🪿</p>
+      <p class="tiny">Secret: type “goose” 😉</p>
+    </footer>
   </main>
 
-  <footer class="footer">
-    <p>Built with love 🪿💗</p>
-  </footer>
-
-  <!-- Script -->
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
