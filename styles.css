@@ -1,52 +1,97 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #1a1023;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #5b2b82, #8e44ad);
   color: #fff;
+  min-height: 100vh;
+  transition: box-shadow 0.5s ease;
+}
+
+/* Strawberry Easter Egg */
+body.strawberry {
+  box-shadow: inset 0 0 200px rgba(255, 80, 120, 0.8);
 }
 
 .topbar {
-  text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.6rem;
 }
 
 .pill {
-  margin-top: 1rem;
-  opacity: 0.8;
+  background: rgba(255,255,255,0.15);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  display: flex;
+  gap: 0.4rem;
+  font-size: 0.85rem;
 }
 
 .wrap {
   padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .heroGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
 }
 
-.heroPhoto img {
+.heroImg {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 20px;
 }
 
-.heroTags span {
-  display: inline-block;
-  background: rgba(255,255,255,0.1);
-  padding: 0.4rem 0.7rem;
+.heroTags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: rgba(255,255,255,0.2);
+  padding: 0.3rem 0.6rem;
   border-radius: 999px;
-  margin: 0.3rem;
+  font-size: 0.75rem;
 }
 
-button {
-  padding: 0.7rem 1.2rem;
+.section {
+  margin-top: 3rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.12);
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 999px;
   border: none;
   cursor: pointer;
 }
 
-.memories {
-  margin-top: 4rem;
+.primary {
+  background: #ff8fb1;
+  color: #3b0030;
+}
+
+.center {
   text-align: center;
 }
 
@@ -54,53 +99,53 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .memoryCard {
   perspective: 1000px;
 }
 
-.cardInner {
+.memoryInner {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 260px;
   transform-style: preserve-3d;
-  transition: transform 0.6s;
+  transition: transform 0.7s;
 }
 
-.memoryCard:hover .cardInner {
+.memoryCard:hover .memoryInner {
   transform: rotateY(180deg);
 }
 
-.cardFront, .cardBack {
+.memoryFront,
+.memoryBack {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.cardFront img {
+.memoryFront img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 16px;
 }
 
-.cardBack {
-  background: #ff4d6d;
-  display: grid;
-  place-items: center;
+.memoryBack {
+  background: rgba(0,0,0,0.6);
   transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .footer {
-  text-align: center;
+  margin-top: 4rem;
   padding: 2rem;
-  opacity: 0.6;
+  text-align: center;
+  opacity: 0.8;
 }
-
-/* Easter egg */
-.strawberry {
-  box-shadow: inset 0 0 80px rgba(255, 0, 70, 0.5);
-}
-
